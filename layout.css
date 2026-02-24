@@ -1,0 +1,529 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Cabin',sans-serif;font-size:16px;line-height:1.6;color:#181717;background:#fff}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;height:auto;display:block}
+.HeaderOuter{background:linear-gradient(135deg,#73037A 0%,#8e1e94 50%,#73037A 100%);padding:24px 0;box-shadow:0 4px 12px #18171726}
+.HeaderInner{max-width:1140px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:flex-start;gap:60px}
+.BrandColumn{display:flex;flex-direction:column;gap:12px;min-width:280px}
+.LogoWrapper{background:#fff;padding:12px;border-radius:12px;width:90px;height:90px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 8px #18171733}
+.LogoLink{display:block;width:100%;height:100%}
+.SiteLogo{width:100%;height:100%;object-fit:contain}
+.CompanyIdentity{padding-left:4px}
+.CompanyName{font-size:28px;font-weight:700;color:#fff;line-height:1.2;margin-bottom:4px}
+.SpecializationTag{font-size:14px;color:#FEC236;font-weight:400}
+.NavigationColumn{display:flex;flex-direction:column;gap:20px;flex:1;align-items:flex-end}
+.MainNavigation{width:100%}
+.NavList{display:flex;gap:32px;justify-content:flex-end;flex-wrap:wrap}
+.NavItem{display:inline-block}
+.NavLink{color:#fff;font-size:16px;font-weight:700;padding:8px 16px;border-radius:8px;background:#ffffff1a;transition:all .3s ease;display:block}
+.NavLink:hover{background:#FEC236;color:#181717;transform:scale(1.05)}
+.ContactDetails{display:flex;gap:24px;flex-wrap:wrap;justify-content:flex-end}
+.ContactItem{display:flex;align-items:center;gap:8px;color:#fff;font-size:14px}
+.ContactIcon{font-size:18px;color:#FEC236}
+.ContactLink{color:#fff;transition:color .3s ease}
+.ContactLink:hover{color:#FEC236}
+.ContactText{color:#fff}
+main{min-height:200px}
+.FooterBackgroundLayer{background:linear-gradient(180deg,#181717 0%,#2a2828 50%,#181717 100%);padding:60px 0 0;margin-top:80px;position:relative}
+.FooterBackgroundLayer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#73037A 0%,#FEC236 50%,#73037A 100%)}
+.FooterContentWrapper{max-width:1140px;margin:0 auto;padding:0 20px}
+.FooterInner{display:flex;flex-direction:column;gap:40px}
+.FooterTopSection{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;padding-bottom:40px;border-bottom:1px solid #fec23633}
+.FooterColumn{display:flex;flex-direction:column;gap:16px}
+.FooterHeading{font-size:18px;font-weight:700;color:#FEC236;margin-bottom:8px}
+.FooterLinkList{display:flex;flex-direction:column;gap:10px}
+.FooterLinkItem{display:block}
+.FooterLink{color:#fff;font-size:15px;transition:all .3s ease;display:inline-block}
+.FooterLink:hover{color:#FEC236;transform:translateX(4px)}
+.FooterContactInfo{display:flex;flex-direction:column;gap:12px}
+.FooterContactLine{display:flex;align-items:center;gap:10px;color:#fff;font-size:14px;line-height:1.5}
+.FooterIcon{font-size:18px;color:#FEC236;flex-shrink:0}
+.FooterContactLink{color:#fff;transition:color .3s ease}
+.FooterContactLink:hover{color:#FEC236}
+.FooterDescription{color:#fff;font-size:14px;line-height:1.7}
+.FooterBottomSection{display:flex;justify-content:space-between;align-items:center;padding:24px 0;gap:20px;flex-wrap:wrap}
+.CopyrightText{color:#fff;font-size:14px}
+.LegalNavigation{display:block}
+.LegalLinkList{display:flex;gap:24px;flex-wrap:wrap}
+.LegalLinkItem{display:inline-block}
+.LegalLink{color:#fff;font-size:14px;transition:color .3s ease}
+.LegalLink:hover{color:#FEC236}
+.CookiePopup{position:fixed;right:20px;top:50%;transform:translateY(-50%) translateX(500px);background:#fff;border-radius:12px;box-shadow:0 8px 24px #1817174d;max-width:420px;width:calc(100% - 40px);z-index:10000;transition:transform .4s ease;border:2px solid #73037A}
+.CookiePopup.show{transform:translateY(-50%) translateX(0)}
+.CookiePopup.hide{transform:translateY(-50%) translateX(500px)}
+.CookiePopupInner{padding:28px}
+.CookieHeader{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.CookieTitle{font-size:20px;font-weight:700;color:#73037A}
+.CookiePolicyButton{background:none;border:none;cursor:pointer;color:#73037A;font-size:24px;padding:4px;transition:color .3s ease}
+.CookiePolicyButton:hover{color:#FEC236}
+.CookieDescription{font-size:14px;color:#181717;margin-bottom:20px;line-height:1.6}
+.CookieToggles{display:flex;flex-direction:column;gap:14px;margin-bottom:24px}
+.CookieToggleItem{display:block}
+.ToggleLabel{display:flex;align-items:center;gap:12px;cursor:pointer;user-select:none}
+.ToggleInput{display:none}
+.ToggleSwitch{width:48px;height:24px;background:#ccc;border-radius:12px;position:relative;transition:background .3s ease}
+.ToggleSwitch::after{content:'';position:absolute;top:2px;left:2px;width:20px;height:20px;background:#fff;border-radius:50%;transition:transform .3s ease}
+.ToggleInput:checked + .ToggleSwitch{background:#73037A}
+.ToggleInput:checked + .ToggleSwitch::after{transform:translateX(24px)}
+.ToggleInput:disabled + .ToggleSwitch{background:#73037A;opacity:.6;cursor:not-allowed}
+.ToggleText{font-size:14px;color:#181717;font-weight:400}
+.CookieActions{display:flex;gap:10px;flex-wrap:wrap}
+.CookieButton{flex:1;min-width:120px;padding:12px 20px;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;transition:all .3s ease;font-family:'Cabin',sans-serif}
+.CookieButton--accept{background:#73037A;color:#fff}
+.CookieButton--accept:hover{background:#8e1e94;transform:scale(1.04)}
+.CookieButton--decline{background:#FEC236;color:#181717}
+.CookieButton--decline:hover{background:#fed966;transform:scale(1.04)}
+.CookieButton--save{background:#181717;color:#fff}
+.CookieButton--save:hover{background:#2a2828;transform:scale(1.04)}
+.PolicyTooltip{display:none;position:absolute;top:-60px;right:0;background:#181717;color:#fff;padding:12px 16px;border-radius:8px;font-size:13px;white-space:nowrap;box-shadow:0 4px 12px #1817174d}
+.PolicyTooltip.show{display:block}
+.PolicyTooltip .PolicyLink{color:#FEC236;text-decoration:underline}
+@media (max-width: 992px) {
+.HeaderInner{flex-direction:column;align-items:stretch;gap:30px}
+.BrandColumn{flex-direction:row;align-items:center;gap:16px;min-width:auto}
+.NavigationColumn{align-items:stretch}
+.NavList{justify-content:flex-start;gap:16px}
+.ContactDetails{justify-content:flex-start;gap:16px}
+.FooterTopSection{grid-template-columns:1fr;gap:32px}
+}
+@media (max-width: 768px) {
+.HeaderOuter{padding:20px 0}
+.CompanyName{font-size:22px}
+.SpecializationTag{font-size:13px}
+.NavList{flex-direction:column;gap:8px}
+.NavLink{padding:10px 16px}
+.ContactDetails{flex-direction:column;gap:10px}
+.FooterBottomSection{flex-direction:column;align-items:flex-start}
+.LegalLinkList{flex-direction:column;gap:10px}
+.CookiePopup{right:10px;left:10px;max-width:none;width:calc(100% - 20px)}
+.CookieActions{flex-direction:column}
+.CookieButton{width:100%;min-width:auto}
+}
+@media (max-width: 480px) {
+.BrandColumn{flex-direction:column;align-items:flex-start}
+.LogoWrapper{width:70px;height:70px}
+.CompanyName{font-size:20px}
+}
+.rules-block{max-width:1140px;margin:0 auto;padding:60px 20px;background:#fff}
+.rules-block h1{font-size:42px;line-height:1.2;color:#181717;margin:0 0 32px;font-weight:700;letter-spacing:-.5px}
+.rules-block h2{font-size:32px;line-height:1.3;color:#73037A;margin:48px 0 24px;font-weight:600;letter-spacing:-.3px}
+.rules-block h3{font-size:26px;line-height:1.4;color:#181717;margin:36px 0 20px;font-weight:600}
+.rules-block h4{font-size:22px;line-height:1.4;color:#73037A;margin:28px 0 16px;font-weight:600}
+.rules-block h5{font-size:18px;line-height:1.5;color:#181717;margin:24px 0 14px;font-weight:600}
+.rules-block h6{font-size:16px;line-height:1.5;color:#73037A;margin:20px 0 12px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.rules-block p{font-size:17px;line-height:1.75;color:#181717;margin:0 0 20px;font-weight:400}
+.rules-block em,.rules-block i{font-style:italic;color:#73037A}
+.rules-block strong{font-weight:600;color:#181717}
+.rules-block a{color:#73037A;text-decoration:underline;transition:color .3s ease}
+.rules-block a:hover{color:#FEC236}
+.rules-block ul,.rules-block ol{margin:0 0 24px;padding-left:30px}
+.rules-block ul li,.rules-block ol li{font-size:17px;line-height:1.75;color:#181717;margin-bottom:12px}
+.rules-block table{width:100%;border-collapse:collapse;margin:32px 0;background:#fff;box-shadow:0 2px 6px #18171714;border-radius:12px;overflow:hidden}
+.rules-block thead{background:linear-gradient(135deg,#73037A 0%,#9504A1 100%)}
+.rules-block thead tr th{padding:18px 20px;text-align:left;font-size:16px;font-weight:600;color:#fff;letter-spacing:.3px;border-bottom:3px solid #FEC236}
+.rules-block tbody tr{border-bottom:1px solid #e8e8e8;transition:background .25s ease}
+.rules-block tbody tr:hover{background:#f9f9f9}
+.rules-block tbody tr:last-child{border-bottom:none}
+.rules-block tbody tr td{padding:16px 20px;font-size:16px;line-height:1.6;color:#181717}
+.rules-block tbody tr th{padding:16px 20px;font-size:16px;font-weight:600;color:#73037A;text-align:left}
+.rules-block hr{border:none;height:2px;background:linear-gradient(90deg,#73037A 0%,#FEC236 50%,#73037A 100%);margin:48px 0;border-radius:2px}
+.rules-block blockquote{margin:28px 0;padding:20px 24px;background:#f7f7f7;border-left:4px solid #73037A;border-radius:8px}
+.rules-block blockquote p{margin:0;font-size:16px;font-style:italic;color:#181717}
+@media (max-width: 768px) {
+.rules-block{padding:40px 16px}
+.rules-block h1{font-size:32px;margin-bottom:24px}
+.rules-block h2{font-size:26px;margin:36px 0 20px}
+.rules-block h3{font-size:22px;margin:28px 0 16px}
+.rules-block h4{font-size:20px;margin:24px 0 14px}
+.rules-block h5{font-size:17px;margin:20px 0 12px}
+.rules-block h6{font-size:15px;margin:18px 0 10px}
+.rules-block p{font-size:16px;line-height:1.7}
+.rules-block table{font-size:14px;margin:24px 0}
+.rules-block thead tr th{padding:14px 12px;font-size:14px}
+.rules-block tbody tr td,.rules-block tbody tr th{padding:12px;font-size:14px}
+.rules-block hr{margin:36px 0}
+}
+@media (max-width: 480px) {
+.rules-block{padding:30px 12px}
+.rules-block h1{font-size:28px}
+.rules-block h2{font-size:24px}
+.rules-block table{display:block;overflow-x:auto}
+}
+.TitleModule{background:linear-gradient(131deg,#73037A 0%,#FEC236 50%,#181717 100%);padding:80px 20px 120px;position:relative;overflow:hidden}
+.TitleModule::after{content:'';position:absolute;bottom:-2px;left:0;width:100%;height:100px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100'%3E%3Cpath fill='%23ffffff' d='M0,50 Q360,0 720,50 T1440,50 L1440,100 L0,100 Z'/%3E%3C/svg%3E") no-repeat bottom;background-size:cover}
+.TitleModule .ContentWrapper{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.TitleModule .TextContent{color:#fff;padding-right:40px}
+.TitleModule .ProblemStatement{font-size:18px;line-height:1.6;margin-bottom:24px;opacity:.95}
+.TitleModule .MainHeading{font-size:42px;line-height:1.3;margin-bottom:28px;font-weight:700}
+.TitleModule .SolutionText{font-size:16px;line-height:1.7;opacity:.9}
+.TitleModule .VisualArea{position:relative;transform:translateX(40px)}
+.TitleModule .HeroImage{width:100%;height:420px;object-fit:cover;border-radius:12px;box-shadow:0 20px 60px #0006;filter:contrast(1.05) saturate(0.95)}
+.CourseStructureBlock{padding:90px 20px;background:#fafafa}
+.CourseStructureBlock .BlockContainer{max-width:1140px;margin:0 auto}
+.CourseStructureBlock .SectionLabel{font-size:14px;color:#73037A;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px}
+.CourseStructureBlock .HeadingTwo{font-size:36px;color:#181717;margin-bottom:20px;font-weight:700}
+.CourseStructureBlock .IntroDescription{font-size:16px;color:#4a4a4a;line-height:1.8;margin-bottom:50px;max-width:720px}
+.CourseStructureBlock .ModuleGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.CourseStructureBlock .ModuleCard{background:#fff;padding:36px;border-radius:10px;box-shadow:0 4px 12px #00000014;transition:transform .3s ease,box-shadow .3s ease;border-top:4px solid #FEC236}
+.CourseStructureBlock .ModuleCard:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 12px 28px #73037a2e}
+.CourseStructureBlock .ModuleNumber{font-size:48px;color:#FEC236;font-weight:700;line-height:1;margin-bottom:16px;opacity:.9}
+.CourseStructureBlock .ModuleTitle{font-size:20px;color:#181717;margin-bottom:14px;font-weight:600}
+.CourseStructureBlock .ModuleDescription{font-size:15px;color:#5a5a5a;line-height:1.7}
+.PathwayComparisonSection{padding:100px 20px;background:#fff;position:relative}
+.PathwayComparisonSection::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:2px;height:100%;background:linear-gradient(180deg,#73037A 0%,#FEC236 100%);opacity:.2}
+.PathwayComparisonSection .ComparisonContainer{max-width:1140px;margin:0 auto;text-align:center;margin-bottom:60px}
+.PathwayComparisonSection .HeadingThree{font-size:34px;color:#181717;margin-bottom:18px;font-weight:700}
+.PathwayComparisonSection .SubDescription{font-size:16px;color:#666;line-height:1.7;max-width:680px;margin:0 auto}
+.PathwayComparisonSection .PathwayColumns{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.PathwayComparisonSection .PathwayOption{padding:44px;background:#f8f8f8;border-radius:14px;position:relative;z-index:1}
+.PathwayComparisonSection .PathwayOption:first-child{background:linear-gradient(135deg,#73037a0f 0%,#fec2360f 100%)}
+.PathwayComparisonSection .PathwayBadge{display:inline-block;padding:8px 18px;background:#73037A;color:#fff;font-size:13px;font-weight:600;border-radius:20px;margin-bottom:20px;text-transform:uppercase;letter-spacing:.8px}
+.PathwayComparisonSection .PathwayOption:last-child .PathwayBadge{background:#FEC236;color:#181717}
+.PathwayComparisonSection .PathwayName{font-size:26px;color:#181717;margin-bottom:18px;font-weight:600}
+.PathwayComparisonSection .PathwayDetails{font-size:15px;color:#4a4a4a;line-height:1.8;margin-bottom:28px}
+.PathwayComparisonSection .FeatureList{list-style:none;padding:0;margin:0}
+.PathwayComparisonSection .FeatureList li{padding:12px 0;font-size:15px;color:#333;border-bottom:1px solid #00000014;position:relative;padding-left:32px}
+.PathwayComparisonSection .FeatureList li::before{content:'✓';position:absolute;left:0;color:#73037A;font-weight:700;font-size:18px}
+.PathwayComparisonSection .FeatureList li:last-child{border-bottom:none}
+.OutcomesVisualization{padding:90px 20px;background:linear-gradient(165deg,#181717 0%,#73037A 100%);position:relative;overflow:hidden}
+.OutcomesVisualization::before{content:'';position:absolute;top:-50%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,#fec23626 0%,transparent 70%);border-radius:50%}
+.OutcomesVisualization .OutcomesWrapper{max-width:1140px;margin:0 auto;position:relative;z-index:1}
+.OutcomesVisualization .HeadingFour{font-size:38px;color:#fff;margin-bottom:24px;font-weight:700;text-align:center}
+.OutcomesVisualization .CentralDescription{font-size:16px;color:#ffffffd9;line-height:1.8;text-align:center;max-width:700px;margin:0 auto 60px}
+.OutcomesVisualization .ProgressTracker{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.OutcomesVisualization .ProgressItem{background:#ffffff1a;backdrop-filter:blur(10px);padding:32px 24px;border-radius:12px;text-align:center;border:1px solid #fec2364d;transition:transform .3s ease,background .3s ease}
+.OutcomesVisualization .ProgressItem:hover{transform:translateY(-8px) scale(1.05);background:#fec23626}
+.OutcomesVisualization .ProgressPercentage{font-size:52px;color:#FEC236;font-weight:700;line-height:1;margin-bottom:12px}
+.OutcomesVisualization .ProgressLabel{font-size:15px;color:#fff;font-weight:500;margin-bottom:8px}
+.OutcomesVisualization .ProgressDetail{font-size:13px;color:#ffffffb3;line-height:1.6}
+.EnrollmentActionBlock{padding:100px 20px;background:#fff;position:relative}
+.EnrollmentActionBlock .ActionWrapper{max-width:1140px;margin:0 auto;display:flex;align-items:center;gap:70px}
+.EnrollmentActionBlock .VisualSection{flex:1}
+.EnrollmentActionBlock .ProcessImage{width:100%;height:460px;object-fit:cover;border-radius:14px;box-shadow:0 16px 48px #73037a33}
+.EnrollmentActionBlock .ContentSection{flex:1}
+.EnrollmentActionBlock .HeadingFive{font-size:32px;color:#181717;margin-bottom:22px;font-weight:700}
+.EnrollmentActionBlock .EnrollDescription{font-size:16px;color:#4a4a4a;line-height:1.8;margin-bottom:34px}
+.EnrollmentActionBlock .BenefitHighlights{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:40px}
+.EnrollmentActionBlock .HighlightItem{padding:20px;background:#f5f5f5;border-radius:8px;border-left:4px solid #73037A}
+.EnrollmentActionBlock .HighlightItem:nth-child(even){border-left-color:#FEC236}
+.EnrollmentActionBlock .HighlightTitle{font-size:16px;color:#181717;font-weight:600;margin-bottom:6px}
+.EnrollmentActionBlock .HighlightText{font-size:14px;color:#5a5a5a;line-height:1.6}
+.EnrollmentActionBlock .ActionButton{display:inline-block;padding:16px 44px;background:linear-gradient(135deg,#73037A 0%,#FEC236 100%);color:#fff;font-size:16px;font-weight:600;text-decoration:none;border-radius:8px;transition:transform .3s ease,box-shadow .3s ease;box-shadow:0 6px 20px #73037a4d;position:relative;z-index:2}
+.EnrollmentActionBlock .ActionButton:hover{transform:translateY(-3px) scale(1.06);box-shadow:0 10px 32px #73037a66}
+@media (max-width: 1024px) {
+.TitleModule .ContentWrapper{grid-template-columns:1fr;gap:40px}
+.TitleModule .VisualArea{transform:translateX(0)}
+.TitleModule .MainHeading{font-size:36px}
+.CourseStructureBlock .ModuleGrid{grid-template-columns:repeat(2,1fr)}
+.PathwayComparisonSection .PathwayColumns{grid-template-columns:1fr;gap:40px}
+.OutcomesVisualization .ProgressTracker{grid-template-columns:repeat(2,1fr)}
+.EnrollmentActionBlock .ActionWrapper{flex-direction:column;gap:50px}
+.EnrollmentActionBlock .BenefitHighlights{grid-template-columns:1fr}
+}
+@media (max-width: 768px) {
+.TitleModule{padding:60px 20px 100px}
+.TitleModule .MainHeading{font-size:30px}
+.TitleModule .HeroImage{height:320px}
+.CourseStructureBlock .ModuleGrid{grid-template-columns:1fr}
+.CourseStructureBlock .HeadingTwo{font-size:28px}
+.PathwayComparisonSection .HeadingThree{font-size:28px}
+.OutcomesVisualization .HeadingFour{font-size:30px}
+.OutcomesVisualization .ProgressTracker{grid-template-columns:1fr}
+.EnrollmentActionBlock .HeadingFive{font-size:26px}
+.EnrollmentActionBlock .ProcessImage{height:340px}
+}
+.IntroPanel{background:linear-gradient(131deg,#73037A 0%,#FEC236 50%,#181717 100%);padding:120px 20px 100px;position:relative;overflow:hidden}
+.IntroPanel::before{content:'';position:absolute;width:300px;height:300px;background:#fec2361a;border-radius:50%;top:-100px;right:-50px;animation:floatParticle 8s infinite ease-in-out}
+.IntroPanel::after{content:'';position:absolute;width:200px;height:200px;background:#73037a26;border-radius:50%;bottom:-80px;left:10%;animation:floatParticle 10s infinite ease-in-out reverse}
+@keyframes floatParticle {
+0%,100%{transform:translate(0,0) scale(1)}
+50%{transform:translate(20px,-30px) scale(1.1)}
+}
+.IntroPanel-ContentWrapper{max-width:1140px;margin:0 auto;display:flex;flex-direction:column;gap:50px}
+.IntroPanel-TextSection{max-width:680px}
+.IntroPanel-MainHeading{font-size:56px;line-height:1.15;color:#fff;margin:0 0 28px;font-weight:700}
+.IntroPanel-KeyPoints{list-style:none;padding:0;margin:0 0 36px}
+.IntroPanel-KeyPoints li{color:#fff;font-size:19px;line-height:1.6;margin-bottom:16px;padding-left:32px;position:relative}
+.IntroPanel-KeyPoints li::before{content:'';position:absolute;left:0;top:8px;width:18px;height:18px;background:#FEC236;border-radius:50%}
+.IntroPanel-PrimaryButton{display:inline-block;background:#FEC236;color:#181717;padding:16px 42px;border-radius:12px;text-decoration:none;font-size:18px;font-weight:600;transition:all .3s ease;box-shadow:0 4px 6px #0003}
+.IntroPanel-PrimaryButton:hover{transform:scale(1.05);box-shadow:0 6px 12px #0000004d;background:#fff}
+.IntroPanel-ImageContainer{position:relative;max-width:860px;margin:0 auto;filter:contrast(1.08)}
+.IntroPanel-ImageContainer img{width:100%;height:auto;border-radius:14px;box-shadow:0 8px 24px #0000004d}
+.ConnectionBlock{padding:90px 20px;background:#f8f9fa}
+.ConnectionBlock-Inner{max-width:1140px;margin:0 auto}
+.ConnectionBlock-TitleArea{text-align:center;margin-bottom:60px}
+.ConnectionBlock-Heading{font-size:42px;color:#181717;margin:0 0 18px;font-weight:700;position:relative;display:inline-block}
+.ConnectionBlock-Heading::after{content:'';position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);width:80px;height:4px;background:linear-gradient(90deg,#73037A,#FEC236);border-radius:2px}
+.ConnectionBlock-Description{font-size:18px;color:#4a4a4a;line-height:1.65;max-width:720px;margin:24px auto 0}
+.ConnectionBlock-ContentGrid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.ConnectionBlock-ImageWrapper{position:relative}
+.ConnectionBlock-ImageWrapper img{width:100%;height:auto;border-radius:12px;box-shadow:0 5px 18px #0000001f}
+.ConnectionBlock-TextContent{padding:20px}
+.ConnectionBlock-SubHeading{font-size:28px;color:#73037A;margin:0 0 22px;font-weight:600}
+.ConnectionBlock-FeatureList{list-style:none;padding:0;margin:0}
+.ConnectionBlock-FeatureList li{font-size:17px;color:#3a3a3a;line-height:1.7;margin-bottom:20px;padding-left:36px;position:relative}
+.ConnectionBlock-FeatureList li::before{content:'✓';position:absolute;left:0;top:0;color:#FEC236;font-size:22px;font-weight:700}
+.PracticeSection{padding:100px 20px;background:linear-gradient(180deg,#fff 0%,#f3f4f6 100%);position:relative}
+.PracticeSection-Container{max-width:1140px;margin:0 auto}
+.PracticeSection-HeaderRow{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:70px;gap:40px}
+.PracticeSection-TitleColumn{flex:1;max-width:520px}
+.PracticeSection-MainTitle{font-size:44px;color:#181717;margin:0 0 20px;font-weight:700;line-height:1.2}
+.PracticeSection-Subtitle{font-size:18px;color:#5a5a5a;line-height:1.65;margin:0}
+.PracticeSection-VisualColumn{flex:1}
+.PracticeSection-VisualColumn img{width:100%;height:auto;border-radius:12px;box-shadow:0 6px 20px #0000001a}
+.PracticeSection-StatsGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:50px}
+.StatCard{background:#fff;padding:38px 28px;border-radius:10px;box-shadow:0 3px 12px #00000014;text-align:center;transition:all .3s ease;border-top:4px solid #73037A}
+.StatCard:hover{transform:scale(1.04);box-shadow:0 6px 18px #00000026}
+.StatCard-Number{font-size:48px;font-weight:700;color:#73037A;margin:0 0 12px;line-height:1}
+.StatCard-Label{font-size:16px;color:#4a4a4a;margin:0;line-height:1.5}
+.PracticeSection-Divider{width:100%;height:2px;background:linear-gradient(90deg,transparent,#FEC236,transparent);margin:60px 0}
+.PracticeSection-ApproachArea{display:flex;gap:50px;align-items:flex-start}
+.ApproachBox{flex:1;background:#f9fafb;padding:42px 32px;border-radius:12px;border-left:5px solid #FEC236}
+.ApproachBox-Title{font-size:24px;color:#181717;margin:0 0 18px;font-weight:600}
+.ApproachBox-Text{font-size:16px;color:#4a4a4a;line-height:1.7;margin:0 0 14px}
+.ApproachBox-LinkButton{display:inline-block;background:#73037A;color:#fff;padding:12px 32px;border-radius:8px;text-decoration:none;font-size:16px;font-weight:500;transition:all .3s ease;margin-top:16px}
+.ApproachBox-LinkButton:hover{background:#181717;transform:scale(1.03)}
+@media (max-width: 1024px) {
+.IntroPanel-MainHeading{font-size:46px}
+.ConnectionBlock-ContentGrid{gap:36px}
+.PracticeSection-StatsGrid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width: 768px) {
+.IntroPanel{padding:80px 20px 70px}
+.IntroPanel-MainHeading{font-size:36px}
+.IntroPanel-KeyPoints li{font-size:17px}
+.ConnectionBlock{padding:60px 20px}
+.ConnectionBlock-Heading{font-size:32px}
+.ConnectionBlock-ContentGrid{grid-template-columns:1fr;gap:40px}
+.PracticeSection{padding:70px 20px}
+.PracticeSection-HeaderRow{flex-direction:column;gap:30px}
+.PracticeSection-MainTitle{font-size:34px}
+.PracticeSection-StatsGrid{grid-template-columns:1fr;gap:24px}
+.PracticeSection-ApproachArea{flex-direction:column;gap:30px}
+}
+@media (max-width: 480px) {
+.IntroPanel-MainHeading{font-size:28px}
+.IntroPanel-PrimaryButton{width:100%;text-align:center}
+.ConnectionBlock-Heading{font-size:26px}
+.PracticeSection-MainTitle{font-size:28px}
+.StatCard-Number{font-size:38px}
+}
+.PrimaryContactWrapper{background:linear-gradient(131deg,#73037A 0%,#FEC236 50%,#181717 100%);padding:80px 20px 60px;position:relative;overflow:hidden}
+.PrimaryContactWrapper::before{content:'';position:absolute;width:300px;height:300px;background:#fec2361a;border-radius:50%;top:-100px;right:-100px;animation:FloatParticle 8s ease-in-out infinite}
+.PrimaryContactWrapper::after{content:'';position:absolute;width:200px;height:200px;background:#73037a26;border-radius:50%;bottom:-80px;left:-50px;animation:FloatParticle 10s ease-in-out infinite reverse}
+@keyframes FloatParticle {
+0%,100%{transform:translate(0,0)}
+50%{transform:translate(30px,-30px)}
+}
+.ContactHeaderInner{max-width:1140px;margin:0 auto;position:relative;z-index:2}
+.ContactProblemStatement{background:#fffffff2;padding:30px 40px;border-radius:12px;margin-bottom:20px;box-shadow:0 4px 20px #00000026}
+.ContactProblemStatement h1{color:#73037A;font-size:2.8em;margin:0 0 15px;line-height:1.2}
+.ContactProblemStatement .ProblemText{color:#181717;font-size:1.15em;line-height:1.6;margin:0}
+.ContactSolutionBlock{background:#181717e6;padding:25px 40px;border-radius:12px;border-left:5px solid #FEC236}
+.ContactSolutionBlock h2{color:#FEC236;font-size:1.8em;margin:0 0 12px}
+.ContactSolutionBlock .SolutionDescription{color:#fff;font-size:1.05em;line-height:1.7;margin:0}
+.CoreContactSection{max-width:1140px;margin:0 auto;padding:70px 20px}
+.DirectContactGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-bottom:60px}
+.DirectMethodCard{background:linear-gradient(135deg,#fff 0%,#f8f8f8 100%);padding:35px 30px;border-radius:14px;text-align:center;box-shadow:0 3px 15px #00000014;transition:all .3s ease;border:2px solid transparent}
+.DirectMethodCard:hover{transform:translateY(-6px);box-shadow:0 8px 25px #73037a33;border-color:#73037A}
+.DirectMethodCard .MethodIconFrame{width:70px;height:70px;background:linear-gradient(131deg,#73037A 0%,#FEC236 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.DirectMethodCard .MethodIconFrame .typcn{font-size:2.2em;color:#fff}
+.DirectMethodCard h3{color:#181717;font-size:1.4em;margin:0 0 12px}
+.DirectMethodCard .ContactDetail{color:#73037A;font-size:1.05em;font-weight:600;word-break:break-word}
+.DirectMethodCard .DetailLabel{color:#666;font-size:.95em;margin-top:8px;display:block}
+.PrimaryFormContainer{background:#fff;padding:50px 45px;border-radius:16px;box-shadow:0 5px 30px #0000001a;max-width:900px;margin:0 auto 60px}
+.FormTitleSection{text-align:center;margin-bottom:40px}
+.FormTitleSection h2{color:#73037A;font-size:2.2em;margin:0 0 15px}
+.FormTitleSection .SubheadingText{color:#666;font-size:1.1em;line-height:1.6}
+.FormStructure{display:flex;flex-direction:column;gap:25px}
+.InputRowPair{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.FormFieldGroup{display:flex;flex-direction:column}
+.FormFieldGroup label{color:#181717;font-size:.95em;font-weight:600;margin-bottom:8px;display:block}
+.FormFieldGroup input[type="text"],.FormFieldGroup input[type="email"],.FormFieldGroup input[type="tel"],.FormFieldGroup select,.FormFieldGroup textarea{width:100%;padding:14px 16px;border:2px solid #e0e0e0;border-radius:10px;font-size:1em;transition:all .3s ease;background:#fff;box-sizing:border-box}
+.FormFieldGroup input:focus,.FormFieldGroup select:focus,.FormFieldGroup textarea:focus{outline:none;border-color:#73037A;box-shadow:0 0 0 3px #73037a1a}
+.FormFieldGroup select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%2373037A' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:45px;cursor:pointer}
+.RadioGroupSection{display:flex;flex-direction:column}
+.RadioGroupSection label{color:#181717;font-size:.95em;font-weight:600;margin-bottom:12px}
+.RadioOptionsGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.RadioChoice{position:relative}
+.RadioChoice input[type="radio"]{position:absolute;opacity:0;cursor:pointer}
+.RadioChoice .RadioLabel{display:block;padding:14px 18px;border:2px solid #e0e0e0;border-radius:10px;background:#fff;cursor:pointer;transition:all .3s ease;text-align:center;color:#181717;font-weight:500}
+.RadioChoice input[type="radio"]:checked + .RadioLabel{background:linear-gradient(131deg,#73037A 0%,#FEC236 100%);border-color:#73037A;color:#fff}
+.RadioChoice input[type="radio"]:focus + .RadioLabel{box-shadow:0 0 0 3px #73037a33}
+.FormFieldGroup textarea{min-height:140px;resize:vertical;font-family:inherit}
+.PrivacyConsentBlock{display:flex;align-items:flex-start;gap:12px;padding:20px;background:#f9f9f9;border-radius:10px}
+.PrivacyConsentBlock input[type="checkbox"]{margin-top:4px;cursor:pointer;width:18px;height:18px;accent-color:#73037A}
+.PrivacyConsentBlock label{color:#181717;font-size:.95em;line-height:1.6;cursor:pointer;flex:1}
+.PrivacyConsentBlock a{color:#73037A;text-decoration:underline;font-weight:600}
+.SubmitButtonWrapper{text-align:center;margin-top:10px}
+.SubmitFormButton{background:linear-gradient(131deg,#73037A 0%,#FEC236 100%);color:#fff;padding:16px 50px;border:none;border-radius:12px;font-size:1.15em;font-weight:600;cursor:pointer;transition:all .3s ease;box-shadow:0 4px 15px #73037a4d;position:relative;z-index:10}
+.SubmitFormButton:hover{transform:scale(1.05);box-shadow:0 6px 25px #73037a66}
+.VisitLocationSection{background:linear-gradient(135deg,#f5f5f5 0%,#fff 100%);padding:60px 20px;border-radius:16px;max-width:1140px;margin:0 auto}
+.LocationContentGrid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.LocationTextBlock h2{color:#73037A;font-size:2.2em;margin:0 0 20px}
+.LocationTextBlock h2::before{content:'';display:inline-block;width:50px;height:4px;background:#FEC236;margin-right:15px;vertical-align:middle}
+.LocationTextBlock .LocationDescription{color:#181717;font-size:1.1em;line-height:1.7;margin-bottom:30px}
+.AddressDetailBox{background:#fff;padding:30px;border-radius:12px;border-left:5px solid #73037A;box-shadow:0 3px 15px #00000014}
+.AddressDetailBox .AddressIcon{color:#FEC236;font-size:2em;margin-bottom:15px}
+.AddressDetailBox .FullAddress{color:#181717;font-size:1.1em;line-height:1.8;margin:0}
+.LocationVisualArea{background:linear-gradient(131deg,#73037a1a 0%,#fec2361a 100%);border-radius:12px;padding:60px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.LocationVisualArea::before{content:'';position:absolute;width:150px;height:150px;background:#73037A;border-radius:50%;top:-50px;right:-50px;opacity:.15}
+.LocationVisualArea::after{content:'';position:absolute;width:120px;height:120px;background:#FEC236;border-radius:50%;bottom:-40px;left:-40px;opacity:.2}
+.LocationPlaceholder{text-align:center;position:relative;z-index:2}
+.LocationPlaceholder .typcn{font-size:5em;color:#73037A;margin-bottom:20px;display:block}
+.LocationPlaceholder .PlaceholderText{color:#181717;font-size:1.2em;font-weight:600}
+@media (max-width: 968px) {
+.DirectContactGrid{grid-template-columns:1fr}
+.LocationContentGrid{grid-template-columns:1fr}
+.InputRowPair{grid-template-columns:1fr}
+.PrimaryContactWrapper{padding:60px 20px 50px}
+.ContactProblemStatement h1{font-size:2.2em}
+.PrimaryFormContainer{padding:40px 25px}
+.RadioOptionsGrid{grid-template-columns:1fr}
+}
+@media (max-width: 640px) {
+.ContactProblemStatement{padding:25px}
+.ContactSolutionBlock{padding:20px 25px}
+.ContactProblemStatement h1{font-size:1.8em}
+.FormTitleSection h2{font-size:1.8em}
+.LocationVisualArea{padding:40px 20px}
+}
+.IntroductionPanel{background:linear-gradient(157deg,#73037A 0%,#FEC236 48%,#181717 100%);position:relative;overflow:hidden;padding:80px 20px}
+.IntroductionPanel::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background-image:repeating-linear-gradient(45deg,transparent,transparent 2px,#ffffff08 2px,#ffffff08 4px),repeating-linear-gradient(-45deg,transparent,transparent 2px,#00000008 2px,#00000008 4px);pointer-events:none}
+.IntroductionPanel .WidthLimiter{max-width:1140px;margin:0 auto;position:relative;z-index:2}
+.IntroductionPanel .ContentGrid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.IntroductionPanel .TextColumn h1{font-size:48px;color:#fff;margin:0 0 24px;line-height:1.2}
+.IntroductionPanel .TextColumn h1 .HighlightedTerm{color:#FEC236;position:relative;display:inline-block}
+.IntroductionPanel .TextColumn h1 .HighlightedTerm::after{content:'';position:absolute;bottom:-4px;left:0;width:100%;height:3px;background:#FEC236}
+.IntroductionPanel .TextColumn p{font-size:18px;color:#fffffff2;line-height:1.7;margin:0}
+.IntroductionPanel .ImageColumn{position:relative}
+.IntroductionPanel .ImageColumn img{width:100%;height:420px;object-fit:cover;border-radius:12px;filter:brightness(0.92) contrast(1.08);box-shadow:0 12px 32px #0006}
+.ReasonsSectionWrapper{padding:90px 20px;background:#f8f8f8}
+.ReasonsSectionWrapper .ContentBoundary{max-width:1140px;margin:0 auto}
+.ReasonsSectionWrapper .SectionHeader{text-align:center;margin-bottom:60px}
+.ReasonsSectionWrapper .SectionHeader h2{font-size:38px;color:#181717;margin:0 0 16px;position:relative;display:inline-block}
+.ReasonsSectionWrapper .SectionHeader h2::before{content:'';position:absolute;width:60px;height:4px;background:linear-gradient(90deg,#73037A,#FEC236);bottom:-8px;left:50%;transform:translateX(-50%)}
+.ReasonsSectionWrapper .SectionHeader p{font-size:17px;color:#555;line-height:1.6;max-width:720px;margin:0 auto}
+.ReasonsSectionWrapper .CardsGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.ReasonsSectionWrapper .ReasonCard{background:#fff;padding:36px 28px;border-radius:10px;border:2px solid #e5e5e5;transition:all .3s ease}
+.ReasonsSectionWrapper .ReasonCard:hover{transform:translateY(-6px);border-color:#73037A;box-shadow:0 8px 24px #73037a26}
+.ReasonsSectionWrapper .ReasonCard .IconHolder{width:56px;height:56px;background:linear-gradient(135deg,#73037A,#FEC236);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.ReasonsSectionWrapper .ReasonCard .IconHolder i{font-size:28px;color:#fff}
+.ReasonsSectionWrapper .ReasonCard h3{font-size:22px;color:#181717;margin:0 0 12px}
+.ReasonsSectionWrapper .ReasonCard p{font-size:16px;color:#666;line-height:1.6;margin:0}
+.ProcessOutline{padding:90px 20px;background:#fff;position:relative}
+.ProcessOutline::before{content:'';position:absolute;top:50%;left:50%;width:80%;height:80%;background:radial-gradient(circle,#73037a08 0%,transparent 70%);transform:translate(-50%,-50%);pointer-events:none}
+.ProcessOutline .ContainerBox{max-width:1140px;margin:0 auto;position:relative;z-index:2}
+.ProcessOutline .HeadingArea{text-align:center;margin-bottom:64px}
+.ProcessOutline .HeadingArea h2{font-size:38px;color:#181717;margin:0 0 16px}
+.ProcessOutline .HeadingArea h2 .AccentWord{color:#73037A;position:relative}
+.ProcessOutline .HeadingArea h2 .AccentWord::after{content:'';position:absolute;bottom:-4px;left:0;width:100%;height:2px;background:#FEC236}
+.ProcessOutline .StepsLayout{display:flex;flex-direction:column;gap:0}
+.ProcessOutline .StepItem{display:grid;grid-template-columns:80px 1fr;gap:32px;padding:32px 0;border-bottom:1px solid #e8e8e8;position:relative}
+.ProcessOutline .StepItem:last-child{border-bottom:none}
+.ProcessOutline .StepItem::before{content:'';position:absolute;left:39px;top:80px;width:2px;height:calc(100% - 40px);background:linear-gradient(180deg,#73037A,#FEC236);opacity:.3}
+.ProcessOutline .StepItem:last-child::before{display:none}
+.ProcessOutline .StepNumber{width:80px;height:80px;background:linear-gradient(135deg,#73037A,#FEC236);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700;color:#fff;position:relative;z-index:2}
+.ProcessOutline .StepContent h3{font-size:24px;color:#181717;margin:0 0 12px}
+.ProcessOutline .StepContent p{font-size:16px;color:#666;line-height:1.7;margin:0}
+.SupportMatrix{padding:90px 20px;background:linear-gradient(180deg,#f8f8f8 0%,#fff 100%)}
+.SupportMatrix .InnerWrapper{max-width:1140px;margin:0 auto}
+.SupportMatrix .TitleBlock{text-align:center;margin-bottom:56px}
+.SupportMatrix .TitleBlock h2{font-size:38px;color:#181717;margin:0 0 20px}
+.SupportMatrix .TitleBlock p{font-size:17px;color:#555;line-height:1.6;max-width:680px;margin:0 auto}
+.SupportMatrix .TwoColumnLayout{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.SupportMatrix .ImageSection img{width:100%;height:520px;object-fit:cover;border-radius:12px;box-shadow:0 6px 20px #0000001f}
+.SupportMatrix .ServicesList{display:flex;flex-direction:column;gap:24px}
+.SupportMatrix .ServiceItem{background:#fff;padding:28px;border-radius:10px;border-left:4px solid #73037A;box-shadow:0 3px 12px #00000014;transition:all .3s ease}
+.SupportMatrix .ServiceItem:hover{transform:translateX(8px);box-shadow:0 5px 18px #73037a2e}
+.SupportMatrix .ServiceItem h4{font-size:20px;color:#181717;margin:0 0 10px;display:flex;align-items:center;gap:12px}
+.SupportMatrix .ServiceItem h4 i{color:#FEC236;font-size:22px}
+.SupportMatrix .ServiceItem p{font-size:15px;color:#666;line-height:1.6;margin:0}
+.CalloutBanner{padding:80px 20px;background:#181717;position:relative;overflow:hidden}
+.CalloutBanner::after{content:'';position:absolute;top:-50%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,#fec23626 0%,transparent 70%);pointer-events:none}
+.CalloutBanner .CentralBox{max-width:1140px;margin:0 auto;text-align:center;position:relative;z-index:2}
+.CalloutBanner .CentralBox h2{font-size:42px;color:#fff;margin:0 0 20px;line-height:1.3}
+.CalloutBanner .CentralBox h2 .EmphasisText{color:#FEC236;position:relative}
+.CalloutBanner .CentralBox h2 .EmphasisText::before{content:'';position:absolute;width:40px;height:40px;background:#fec23633;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);z-index:-1}
+.CalloutBanner .CentralBox p{font-size:18px;color:#ffffffe6;line-height:1.7;margin:0 0 36px;max-width:760px;margin-left:auto;margin-right:auto}
+.CalloutBanner .ActionButton{display:inline-block;padding:16px 44px;background:linear-gradient(135deg,#73037A,#FEC236);color:#fff;text-decoration:none;font-size:17px;font-weight:600;border-radius:8px;transition:all .3s ease;box-shadow:0 4px 16px #fec2364d;position:relative;z-index:10}
+.CalloutBanner .ActionButton:hover{transform:scale(1.05);box-shadow:0 6px 24px #fec23680}
+@media (max-width: 968px) {
+.IntroductionPanel .ContentGrid{grid-template-columns:1fr;gap:40px}
+.IntroductionPanel .TextColumn h1{font-size:38px}
+.IntroductionPanel .ImageColumn img{height:340px}
+.ReasonsSectionWrapper .CardsGrid{grid-template-columns:1fr;gap:24px}
+.ProcessOutline .StepItem{grid-template-columns:60px 1fr;gap:20px}
+.ProcessOutline .StepNumber{width:60px;height:60px;font-size:26px}
+.ProcessOutline .StepItem::before{left:29px;top:60px}
+.SupportMatrix .TwoColumnLayout{grid-template-columns:1fr;gap:36px}
+.SupportMatrix .ImageSection img{height:380px}
+.CalloutBanner .CentralBox h2{font-size:32px}
+}
+@media (max-width: 640px) {
+.IntroductionPanel{padding:60px 20px}
+.IntroductionPanel .TextColumn h1{font-size:32px}
+.IntroductionPanel .TextColumn p{font-size:16px}
+.IntroductionPanel .ImageColumn img{height:280px}
+.ReasonsSectionWrapper{padding:60px 20px}
+.ReasonsSectionWrapper .SectionHeader h2{font-size:30px}
+.ProcessOutline{padding:60px 20px}
+.ProcessOutline .HeadingArea h2{font-size:30px}
+.SupportMatrix{padding:60px 20px}
+.SupportMatrix .TitleBlock h2{font-size:30px}
+.CalloutBanner{padding:60px 20px}
+.CalloutBanner .CentralBox h2{font-size:28px}
+.CalloutBanner .ActionButton{padding:14px 32px;font-size:16px}
+}
+.SuccessWrapper{background:linear-gradient(135deg,#f8f4f9 0%,#fef9ed 50%,#f9f9f9 100%);min-height:85vh;display:flex;align-items:center;justify-content:center;padding:60px 20px;position:relative;overflow:hidden}
+.SuccessWrapper::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,#73037a14 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.SuccessWrapper::after{content:'';position:absolute;bottom:-30%;left:-15%;width:500px;height:500px;background:radial-gradient(circle,#fec2361a 0%,transparent 65%);border-radius:50%;pointer-events:none}
+.ContentContainer-success{max-width:680px;width:100%;margin:0 auto;position:relative;z-index:2}
+.ConfirmationCard-outer{background:#fff;border-radius:12px;padding:50px 45px 45px;box-shadow:0 4px 20px #18171714 0 1px 4px #1817170a;border:1px solid #73037a0f;position:relative;text-align:center}
+.ConfirmationCard-outer::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:60%;height:2px;background:linear-gradient(90deg,transparent 0%,#73037A 50%,transparent 100%)}
+.IconCircle-primary{width:90px;height:90px;margin:0 auto 28px;background:linear-gradient(135deg,#73037A 0%,#9c0fa6 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 6px 18px #73037a40}
+.IconCircle-primary::before{content:'';position:absolute;inset:-8px;border-radius:50%;border:2px solid #73037a26;animation:pulse-ring 2.5s ease-out infinite}
+@keyframes pulse-ring {
+0%{transform:scale(1);opacity:1}
+100%{transform:scale(1.15);opacity:0}
+}
+.IconCircle-primary .typcn{font-size:48px;color:#fff}
+.SuccessHeading-main{font-size:32px;font-weight:700;color:#181717;margin:0 0 16px;line-height:1.3}
+.SuccessMessage-text{font-size:17px;line-height:1.7;color:#4a4a4a;margin:0 0 32px}
+.InfoPanel-details{background:linear-gradient(135deg,#fef9ed 0%,#f8f4f9 100%);border-radius:8px;padding:24px 28px;margin:0 0 32px;border-left:4px solid #FEC236;text-align:left}
+.InfoPanel-details .DetailRow-item{display:flex;align-items:flex-start;margin-bottom:14px}
+.InfoPanel-details .DetailRow-item:last-child{margin-bottom:0}
+.InfoPanel-details .typcn{font-size:20px;color:#73037A;margin-right:12px;margin-top:2px;flex-shrink:0}
+.InfoPanel-details .DetailText-content{font-size:15px;line-height:1.6;color:#3a3a3a}
+.InfoPanel-details .DetailText-content strong{color:#181717;font-weight:600}
+.ActionGroup-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:36px}
+.PrimaryButton-action{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#73037A 0%,#9c0fa6 100%);color:#fff;text-decoration:none;padding:14px 32px;border-radius:8px;font-size:16px;font-weight:600;border:none;cursor:pointer;transition:all .25s ease;box-shadow:0 3px 10px #73037a33;position:relative;z-index:3}
+.PrimaryButton-action:hover{transform:translateY(-2px);box-shadow:0 5px 16px #73037a4d}
+.PrimaryButton-action .typcn{font-size:20px}
+.SecondaryButton-action{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#73037A;text-decoration:none;padding:14px 32px;border-radius:8px;font-size:16px;font-weight:600;border:2px solid #73037A;cursor:pointer;transition:all .25s ease;position:relative;z-index:3}
+.SecondaryButton-action:hover{background:#73037A;color:#fff;transform:scale(1.03)}
+.SecondaryButton-action .typcn{font-size:20px}
+.FooterNote-text{font-size:14px;line-height:1.6;color:#6a6a6a;margin:28px 0 0;padding-top:24px;border-top:1px solid #73037a1a}
+.DecoLine-bottom{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:40%;height:2px;background:linear-gradient(90deg,transparent 0%,#FEC236 50%,transparent 100%)}
+@media (max-width: 768px) {
+.SuccessWrapper{padding:40px 16px;min-height:75vh}
+.ContentContainer-success{max-width:100%}
+.ConfirmationCard-outer{padding:40px 28px 36px}
+.SuccessHeading-main{font-size:26px}
+.SuccessMessage-text{font-size:16px;margin-bottom:26px}
+.IconCircle-primary{width:80px;height:80px;margin-bottom:24px}
+.IconCircle-primary .typcn{font-size:42px}
+.InfoPanel-details{padding:20px 22px;margin-bottom:26px}
+.ActionGroup-buttons{flex-direction:column;gap:12px;margin-top:28px}
+.PrimaryButton-action,.SecondaryButton-action{width:100%;justify-content:center;padding:13px 24px;font-size:15px}
+.FooterNote-text{font-size:13px;margin-top:22px;padding-top:20px}
+}
+@media (max-width: 480px) {
+.SuccessWrapper{padding:30px 12px}
+.ConfirmationCard-outer{padding:32px 20px 28px;border-radius:10px}
+.SuccessHeading-main{font-size:23px}
+.SuccessMessage-text{font-size:15px}
+.InfoPanel-details{padding:18px}
+.InfoPanel-details .DetailText-content{font-size:14px}
+}

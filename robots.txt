@@ -1,7 +1,5 @@
 User-agent: *
 Allow: /
-User-agent: Bingbot
-Allow: /
-User-agent: AdIdxBot
+User-agent: Googlebot-News
 Allow: /
 Sitemap: https://app-lighter-gamma.vercel.app/sitemap.xml
