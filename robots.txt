@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 User-agent: Googlebot-News
 Allow: /
-Sitemap: https://app-lighter-gamma.vercel.app/sitemap.xml
+Sitemap: https://app-lighter-vella.vercel.app/sitemap.xml
