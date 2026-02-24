@@ -1,84 +1,572 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Redirecting...</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- fallback редирект (важно для Vercel) -->
-  <meta http-equiv="refresh" content="6;url=https://storage.googleapis.com/app-hypersui-p1/index.html">
-
-  <style>
-  body {
-    margin: 0;
-    height: 100vh;
-    background: #020617; /* slate-950 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Inter, ui-sans-serif, system-ui, Arial, Helvetica, sans-serif;
-    color: #e5e7eb; /* slate-200 */
+  <link rel="icon" type="image/svg" href="./favicon.svg">
+  <title>Blockchain Applications in Digital Learning | Lighter DEX</title>
+  <meta name="description" content="Practical workshops on implementing blockchain for credential verification, learning records, and decentralized education systems. Hands-on exercises with real protocols.">
+  <meta name="theme-color" content="#322F2F">
+  <meta property="og:title" content="Blockchain Applications in Digital Learning | Lighter DEX">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://app-lighter-gamma.vercel.app/">
+  <meta property="og:site_name" content="app-lighter-gamma.vercel.app">
+  <meta property="og:image" content="https://app-lighter-gamma.vercel.app/img/media-1.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.staticdelivr.com/npm/pavilion@1.0.12/dist/pavilion.min.css">
+  <link rel="stylesheet" href="https://esm.sh/hover.css@2.3.1/css/hover-min.css">
+  <link href="./uikit.css" rel="stylesheet">
+  <link rel="sitemap" type="application/xml" href="./sitemap.xml">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Lighter DEX",
+  "url": "https://app-lighter-gamma.vercel.app",
+  "logo": "https://app-lighter-gamma.vercel.app/logo.png",
+  "description": "Practice-oriented online platform for blockchain education workshops with step-by-step assignments and hands-on exercises focused on educational applications.",
+  "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "Raheen Gardens, Raheen",
+  "addressLocality": "Limerick",
+  "postalCode": "V94 A6F3",
+  "addressCountry": "IE"
+  },
+  "contactPoint": {
+  "@type": "ContactPoint",
+  "telephone": "+35351294237",
+  "email": "info@app-lighter-gamma.vercel.app",
+  "contactType": "customer service"
+  },
+  "areaServed": {
+  "@type": "Place",
+  "name": "International"
+  },
+  "aggregateRating": {
+  "@type": "AggregateRating",
+  "ratingValue": "4.7",
+  "reviewCount": "83",
+  "bestRating": "5",
+  "worstRating": "1"
+  },
+  "review": [
+  {
+  "@type": "Review",
+  "reviewRating": {
+  "@type": "Rating",
+  "ratingValue": "5"
+  },
+  "author": {
+  "@type": "Person",
+  "name": "Leif Tannvik"
+  },
+  "reviewBody": "The practical blockchain workshops helped me build a working credential verification system for continuing education certificates. The structured approach made complex concepts accessible."
+  },
+  {
+  "@type": "Review",
+  "reviewRating": {
+  "@type": "Rating",
+  "ratingValue": "5"
+  },
+  "author": {
+  "@type": "Person",
+  "name": "Oskar Bergström"
+  },
+  "reviewBody": "Excellent hands-on experience deploying actual smart contracts to test networks. The workshop balanced theory with real implementation challenges effectively."
   }
-
-  .container {
-    text-align: center;
+  ],
+  "hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "name": "Blockchain in Education Workshops",
+  "itemListElement": [
+  {
+  "@type": "Offer",
+  "itemOffered": {
+  "@type": "Course",
+  "name": "Blockchain Foundations for Education",
+  "description": "Comprehensive introduction to distributed ledger technology, consensus mechanisms, and educational applications of blockchain systems",
+  "provider": {
+  "@type": "Organization",
+  "name": "Lighter DEX"
   }
-
-  .spinner {
-    width: 64px;
-    height: 64px;
-    border: 3px solid #6366f1; /* indigo-500 */
-    border-top-color: transparent;
-    border-radius: 50%;
-    margin: 0 auto 32px;
-    animation: spin 1s linear infinite;
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.35);
   }
-
-  @keyframes spin {
-    to { transform: rotate(360deg); }
+  },
+  {
+  "@type": "Offer",
+  "itemOffered": {
+  "@type": "Course",
+  "name": "Smart Contract Development Workshop",
+  "description": "Hands-on smart contract development using Solidity with focus on educational credential systems and verification protocols",
+  "provider": {
+  "@type": "Organization",
+  "name": "Lighter DEX"
   }
-
-  .text {
-    font-size: 22px;
-    margin-bottom: 12px;
-    opacity: 0.75;
-    color: #cbd5f5; /* indigo-200 */
   }
-
-  .countdown {
-    font-size: 52px;
-    font-weight: 700;
-    color: #818cf8; /* indigo-400 */
-    text-shadow: 0 0 18px rgba(129, 140, 248, 0.45);
+  },
+  {
+  "@type": "Offer",
+  "itemOffered": {
+  "@type": "Course",
+  "name": "Educational Blockchain Applications",
+  "description": "Design and implement blockchain-based credential verification systems, transcript management tools, and micro-certification frameworks",
+  "provider": {
+  "@type": "Organization",
+  "name": "Lighter DEX"
   }
-</style>
-
+  }
+  }
+  ]
+  }
+  }
+  </script>
 </head>
 <body>
-  <div class="container">
-    <div class="spinner"></div>
-    <div class="text">
-      You will be automatically redirected via
+  <header class="mainheader">
+    <div class="hdr-top">
+      <div class="cntnr-wrapper">
+        <div class="cmpny-name">
+          Lighter DEX
+        </div>
+      </div>
     </div>
-    <div class="countdown" id="countdown">3</div>
+
+    <div class="hdr-bottom">
+      <div class="cntnr-wrapper">
+        <div class="hdr-grid">
+          <div class="lg-section">
+            <a href="./" class="logo-link"><img src="./img/logo.png" alt="Lighter DEX Logo" class="logo-img"></a>
+          </div>
+
+          <nav class="mainnavigation">
+            <a href="./" class="nvlink hvr-underline-from-center">Home</a> <a href="./find-us.html" class="nvlink hvr-underline-from-center">Contact Us</a> <a href="./knowledge-center.html" class="nvlink hvr-underline-from-center">Blog</a>
+          </nav>
+
+          <div class="cntct-section">
+            <a href="tel:+35351294237" class="phone-link">+353 51 294 237</a> <a href="mailto:info@app-lighter-gamma.vercel.app" class="email-link">info@app-lighter-gamma.vercel.app</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="hrblck">
+      <div class="cntnr7">
+        <div class="grd--lyt">
+          <div class="txt--wrp">
+            <h1><span class="hghlght">Blockchain reshapes</span> how we think about verified learning and credential authenticity</h1>
+
+            <p>We're building workshops where blockchain isn't just theory on slides. You'll work with real ledgers, smart contracts, and decentralized systems to understand how this technology can transform educational records, certificates, and lifelong learning paths. Every session connects technical fundamentals to practical applications in education contexts.</p>
+            <a href="./find-us.html" class="btn--prm hvr-grow">Start Your Learning Path</a>
+          </div>
+
+          <div class="img--cllg">
+            <div class="img--frm"><img src="./img/media-1520250315.jpg" alt="Interactive blockchain workshop demonstration" width="380" height="460" loading="lazy">
+            </div>
+
+            <div class="img--frm"><img src="./img/media-16.jpg" alt="Hands-on credential verification exercise" width="380" height="460" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ecsys--blck">
+      <div class="cntnr7">
+        <div class="sctn--hdr">
+          <h2>A complete environment for continuous skill development</h2>
+
+          <p>From your first blockchain concepts through advanced smart contract deployment, our platform gives you everything needed to build genuine expertise through structured practice and experimentation.</p>
+        </div>
+
+        <div class="grd--3cl">
+          <div class="ftr--crd">
+            <div class="icn">
+              <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18c-3.86-1-7-5.36-7-10V8.3l7-3.11 7 3.11V10c0 4.64-3.14 9-7 10z"></path></svg>
+            </div>
+
+            <h3>Verified Progress Tracking</h3>
+
+            <p>Your learning journey gets recorded on an actual blockchain. Each completed module, project, and assessment creates an immutable record you can share with employers or institutions who want proof of your capabilities.</p>
+          </div>
+
+          <div class="ftr--crd">
+            <div class="icn">
+              <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
+            </div>
+
+            <h3>Real Network Integration</h3>
+
+            <p>We don't simulate blockchain environments. You'll deploy actual smart contracts to test networks, interact with lighter dex protocols, and see your transactions validated by real consensus mechanisms used in production systems.</p>
+          </div>
+
+          <div class="ftr--crd">
+            <div class="icn">
+              <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
+            </div>
+
+            <h3>Collaborative Problem Solving</h3>
+
+            <p>Complex blockchain challenges need multiple perspectives. Our platform connects you with other learners working through similar problems, creating natural opportunities for knowledge exchange and peer review of solutions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rtm--blck">
+      <div class="cntnr7">
+        <div class="grd--2cl">
+          <div class="cntnt--wrp">
+            <h2>Learning intensity that matches your available time</h2>
+
+            <p>Some weeks you might have twenty hours to dedicate. Other weeks, maybe just two. Our workshop structure adapts to your rhythm without losing continuity or forcing you to skip essential concepts.</p>
+
+            <ul class="prgrss--lst">
+              <li><strong>Self-Paced Core Modules</strong> <span>Work through fundamental blockchain concepts at whatever speed fits your schedule. Materials stay accessible indefinitely, no artificial time pressure.</span></li>
+
+              <li><strong>Live Workshop Sessions</strong> <span>Join scheduled collaborative sessions when you're ready to tackle complex implementations. Recordings available if you miss the live timing.</span></li>
+
+              <li><strong>Flexible Project Deadlines</strong> <span>Major assignments have suggested timelines but accommodate life circumstances. Focus on learning depth rather than arbitrary completion dates.</span></li>
+
+              <li><strong>Asynchronous Feedback Loops</strong> <span>Submit work when you're ready. Instructors review within 48 hours regardless of when you complete each stage.</span></li>
+            </ul>
+          </div>
+
+          <div class="img--wrp"><img src="./img/new-media-17.jpg" alt="Flexible learning schedule visualization" width="560" height="680" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flxb--blck">
+      <div class="cntnr7">
+        <div class="sctn--hdr">
+          <h2>Adjust intensity to match individual capabilities</h2>
+
+          <p>Not everyone learns blockchain concepts at the same rate. Our system recognizes different starting points and provides multiple paths through the same material based on your background and learning preferences.</p>
+        </div>
+
+        <div class="grd--4cl">
+          <div class="lvl--crd">
+            <div class="nmbr">
+              01
+            </div>
+
+            <h4>Foundation Path</h4>
+
+            <p>Start with distributed systems basics if blockchain terminology feels foreign. Build conceptual understanding before touching any code.</p>
+          </div>
+
+          <div class="lvl--crd">
+            <div class="nmbr">
+              02
+            </div>
+
+            <h4>Developer Track</h4>
+
+            <p>Already comfortable with programming? Jump into smart contract development with abbreviated theory sections focused on blockchain-specific considerations.</p>
+          </div>
+
+          <div class="lvl--crd">
+            <div class="nmbr">
+              03
+            </div>
+
+            <h4>Application Focus</h4>
+
+            <p>More interested in educational applications than underlying protocols? Follow a curriculum emphasizing credential systems and verification workflows.</p>
+          </div>
+
+          <div class="lvl--crd">
+            <div class="nmbr">
+              04
+            </div>
+
+            <h4>Advanced Research</h4>
+
+            <p>Exploring cutting-edge implementations like zero-knowledge proofs for private credentials? Access specialized materials and connect with research-oriented cohorts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scl--blck">
+      <div class="cntnr7">
+        <div class="grd--2cl">
+          <div class="img--wrp"><img src="./img/my-edited18.jpg" alt="Social impact through blockchain education" width="580" height="700" loading="lazy">
+          </div>
+
+          <div class="cntnt--wrp">
+            <h2>Values that extend beyond technical skills</h2>
+
+            <p>Blockchain technology raises questions about access, verification, and who controls educational records. Our workshops don't ignore these larger implications. We examine how decentralized systems could democratize credential recognition or potentially create new barriers.</p>
+
+            <p>You'll consider real scenarios where blockchain might help students in regions with unstable institutions maintain verifiable academic records. We also look critically at energy consumption, accessibility limitations, and whether blockchain solves actual problems or creates technical complexity for its own sake.</p>
+
+            <div class="vls--lst">
+              <div class="vl--itm">
+                <h5>Equitable Access</h5>
+
+                <p>Design credential systems that work for learners regardless of their institutional connections or geographic location.</p>
+              </div>
+
+              <div class="vl--itm">
+                <h5>Privacy Considerations</h5>
+
+                <p>Balance transparency with personal data protection when implementing educational blockchains.</p>
+              </div>
+
+              <div class="vl--itm">
+                <h5>Sustainable Implementation</h5>
+
+                <p>Evaluate energy-efficient consensus mechanisms appropriate for educational applications.</p>
+              </div>
+
+              <div class="vl--itm">
+                <h5>Practical Value</h5>
+
+                <p>Distinguish between blockchain applications that solve real problems versus those adding unnecessary complexity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dvlp--blck">
+      <div class="cntnr7">
+        <div class="sctn--hdr">
+          <h2>Continuous development without changing platforms</h2>
+
+          <p>Start with blockchain fundamentals and progress through advanced implementations without needing to migrate to different learning systems or lose your accumulated credentials and project history.</p>
+        </div>
+
+        <div class="pth--cntnr">
+          <div class="pth--ln">
+          </div>
+
+          <div class="stps--grd">
+            <div class="stp--crd">
+              <div class="nmbr2">
+                01
+              </div>
+
+              <h4>Blockchain Foundations</h4>
+
+              <p>Distributed ledger concepts, consensus mechanisms, and basic cryptography underlying blockchain systems.</p>
+            </div>
+
+            <div class="stp--crd">
+              <div class="nmbr2">
+                02
+              </div>
+
+              <h4>Smart Contract Development</h4>
+
+              <p>Write and deploy contracts using Solidity or Rust, test on local networks before moving to test chains.</p>
+            </div>
+
+            <div class="stp--crd">
+              <div class="nmbr2">
+                03
+              </div>
+
+              <h4>Educational Applications</h4>
+
+              <p>Design credential verification systems, build transcript management tools, implement micro-certification frameworks.</p>
+            </div>
+
+            <div class="stp--crd">
+              <div class="nmbr2">
+                04
+              </div>
+
+              <h4>Production Deployment</h4>
+
+              <p>Launch actual blockchain solutions, manage gas costs, handle scaling challenges, monitor network performance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tstmnl--blck">
+      <div class="cntnr7">
+        <div class="sctn--hdr">
+          <h2>What participants actually experienced</h2>
+
+          <p>These accounts come from people who completed substantial portions of our blockchain workshops and applied concepts in real educational contexts.</p>
+        </div>
+
+        <div class="grd--2cl">
+          <div class="tstmnl--crd">
+            <p class="txt">I thought blockchain was just cryptocurrency speculation until this workshop showed me the credential verification potential. Spent three months building a prototype system for our university's continuing education certificates. The step-by-step approach helped me understand consensus mechanisms without drowning in cryptography theory first.</p>
+
+            <div class="prfl">
+              <img src="./img/media-19.jpg" alt="Workshop participant Leif Tannvik" width="60" height="60" loading="lazy">
+              <div class="inf">
+                <div class="nm">
+                  Leif Tannvik
+                </div>
+
+                <div class="rle">
+                  Educational Technology Coordinator
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tstmnl--crd">
+            <p class="txt">The practical focus made the difference. We deployed actual smart contracts to test networks and dealt with real gas optimization problems instead of just reading about theoretical benefits. Took me four months working part-time to complete the advanced modules, but I walked away with a working micro-credential system I could demonstrate to administrators.</p>
+
+            <div class="prfl">
+              <img src="./img/media-20.jpg" alt="Workshop participant Oskar Bergström" width="60" height="60" loading="lazy">
+              <div class="inf">
+                <div class="nm">
+                  Oskar Bergström
+                </div>
+
+                <div class="rle">
+                  Learning Platform Developer
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta--blck">
+      <div class="cntnr7">
+        <h2>Ready to understand blockchain's role in education?</h2>
+
+        <p>Join workshops that connect distributed ledger technology to real credential verification challenges. Work with actual blockchain networks and build systems you can demonstrate.</p>
+        <a href="./find-us.html" class="btn--scndr hvr-grow">Explore Workshop Details</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="ftr-container">
+      <div class="ftr-cascade">
+        <div class="ftr-zone1">
+          <div class="lnk-column">
+            <a href="./accept-cookies.html" class="ftr-link">Cookie Policy</a> <a href="./privacy-guidelines.html" class="ftr-link">Privacy Policy</a>
+          </div>
+
+          <div class="lnk-column">
+            <a href="./" class="ftr-link">Home</a> <a href="./find-us.html" class="ftr-link">Contact Us</a>
+          </div>
+
+          <div class="lnk-column">
+            <a href="./knowledge-center.html" class="ftr-link">Blog</a>
+          </div>
+        </div>
+
+        <div class="ftr-zone2">
+          <div class="cntct-info">
+            <p class="info-item">Raheen Gardens, Raheen, Limerick, V94 A6F3, Ireland</p>
+
+            <p class="info-item">Phone: +353 51 294 237</p>
+
+            <p class="info-item">Email: info@app-lighter-gamma.vercel.app</p>
+          </div>
+        </div>
+
+        <div class="ftr-zone3">
+          <p class="copyright-text">© 2026 Lighter DEX. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-panel" id="cookieConsent" style="display: none;">
+    <div class="panel-content">
+      <h3 class="panel-title">Cookie Settings</h3>
+
+      <p class="panel-text">We use cookies to enhance your experience. Choose your preferences below.</p>
+
+      <div class="cookie-categories">
+        <label class="category-item"><input type="checkbox" checked disabled class="category-check"> <span class="category-label">Necessary</span></label> <label class="category-item"><input type="checkbox" id="analyticsConsent" class="category-check"> <span class="category-label">Analytics</span></label> <label class="category-item"><input type="checkbox" id="adConsent" class="category-check"> <span class="category-label">Marketing</span></label>
+      </div>
+
+      <div class="panel-actions">
+        <button class="btn-accept" id="acceptBtn">Accept Selected</button> <button class="btn-decline" id="declineBtn">Decline All</button>
+      </div>
+      <a href="./accept-cookies.html" class="policy-link">Cookie Policy</a>
+    </div>
   </div>
-
   <script>
-    let seconds = 3;
-    const countdownEl = document.getElementById("countdown");
-
-    const redirectUrl = "https://app-bison-fi.top"; // ← вставь ссылку
-
-    const timer = setInterval(() => {
-      seconds--;
-      countdownEl.textContent = seconds;
-
-      if (seconds <= 0) {
-        clearInterval(timer);
-        window.location.replace(redirectUrl);
-      }
-    }, 1000);
+  const cookieManager = {
+  storageKey: 'app6A65EB_prefs',
+  checkConsent: function() {
+  const consent = document.body.getAttribute('data-cookie-consent');
+  return consent ? consent.split(',') : null;
+  },
+  saveConsent: function(analytics, marketing) {
+  const consentData = ['necessary'];
+  if (analytics) consentData.push('analytics');
+  if (marketing) consentData.push('marketing');
+  document.body.setAttribute('data-cookie-consent', consentData.join(','));
+  localStorage.setItem(this.storageKey, consentData.join(','));
+  if (typeof gtag !== 'undefined') {
+  gtag('consent', 'update', {
+  'analytics_storage': analytics ? 'granted' : 'denied',
+  'ad_storage': marketing ? 'granted' : 'denied',
+  'ad_user_data': marketing ? 'granted' : 'denied',
+  'ad_personalization': marketing ? 'granted' : 'denied'
+  });
+  }
+  },
+  showPanel: function() {
+  const panel = document.getElementById('cookieConsent');
+  if (panel) {
+  panel.style.display = 'block';
+  }
+  },
+  hidePanel: function() {
+  const panel = document.getElementById('cookieConsent');
+  if (panel) {
+  panel.style.display = 'none';
+  }
+  },
+  init: function() {
+  const existing = this.checkConsent();
+  const stored = localStorage.getItem(this.storageKey);
+  if (!existing && !stored) {
+  setTimeout(() => {
+  this.showPanel();
+  }, 2374);
+  } else if (stored) {
+  document.body.setAttribute('data-cookie-consent', stored);
+  }
+  const acceptBtn = document.getElementById('acceptBtn');
+  const declineBtn = document.getElementById('declineBtn');
+  if (acceptBtn) {
+  acceptBtn.addEventListener('click', () => {
+  const analytics = document.getElementById('analyticsConsent').checked;
+  const marketing = document.getElementById('adConsent').checked;
+  this.saveConsent(analytics, marketing);
+  this.hidePanel();
+  });
+  }
+  if (declineBtn) {
+  declineBtn.addEventListener('click', () => {
+  this.saveConsent(false, false);
+  this.hidePanel();
+  });
+  }
+  }
+  };
+  document.addEventListener('DOMContentLoaded', function() {
+  cookieManager.init();
+  });
   </script>
 </body>
 </html>
